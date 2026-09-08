@@ -1,7 +1,7 @@
-import { definePluginApp } from "@bb/plugin-sdk/app";
+import { definePluginApp } from "@riftlabs/plugin-sdk/app";
 import "./app.css";
 
-const SENT_AT_ATTR = "data-bb-sent-at";
+const SENT_AT_ATTR = "data-rift-sent-at";
 const POLL_MS = 400;
 const REFRESH_MS = 1500;
 const HEADER_TITLE_SELECTOR =

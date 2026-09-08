@@ -1,4 +1,4 @@
-import { defineRpcContract, type BbPluginApi } from "@bb/plugin-sdk";
+import { defineRpcContract, type RiftPluginApi } from "@riftlabs/plugin-sdk";
 import { z } from "zod";
 
 const MAX_THREAD_IDS = 8;
@@ -52,8 +52,8 @@ function collectUserSentTimes(
   }
 }
 
-export default function plugin(bb: BbPluginApi) {
-  bb.rpc.register(rpcContract, {
+export default function plugin(rift: RiftPluginApi) {
+  rift.rpc.register(rpcContract, {
     async userMessageTimes({ threadIds }) {
       const times = new Map<string, number>();
 
@@ -62,7 +62,7 @@ export default function plugin(bb: BbPluginApi) {
         let beforeAnchorId: string | undefined;
 
         for (let page = 0; page < MAX_TIMELINE_PAGES; page += 1) {
-          const timeline = await bb.sdk.threads.timeline({
+          const timeline = await rift.sdk.threads.timeline({
             threadId,
             includeNestedRows: "true",
             ...(beforeAnchorSeq && beforeAnchorId

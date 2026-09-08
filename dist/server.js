@@ -11,7 +11,7 @@ var __export = (target, all) => {
 };
 
 // server.ts
-import { defineRpcContract } from "@bb/plugin-sdk";
+import { defineRpcContract } from "@riftlabs/plugin-sdk";
 
 // node_modules/zod/v4/classic/external.js
 var external_exports = {};
@@ -14556,15 +14556,15 @@ function collectUserSentTimes(rows, into) {
     }
   }
 }
-function plugin(bb) {
-  bb.rpc.register(rpcContract, {
+function plugin(rift) {
+  rift.rpc.register(rpcContract, {
     async userMessageTimes({ threadIds }) {
       const times = /* @__PURE__ */ new Map();
       for (const threadId of threadIds) {
         let beforeAnchorSeq;
         let beforeAnchorId;
         for (let page = 0; page < MAX_TIMELINE_PAGES; page += 1) {
-          const timeline = await bb.sdk.threads.timeline({
+          const timeline = await rift.sdk.threads.timeline({
             threadId,
             includeNestedRows: "true",
             ...beforeAnchorSeq && beforeAnchorId ? { beforeAnchorSeq, beforeAnchorId } : {}

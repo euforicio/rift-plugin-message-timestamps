@@ -14,13 +14,19 @@ painted onto the existing chat UI.
 From the BB Community marketplace once the listing is approved, or directly:
 
 ```sh
-bb plugin install git:https://github.com/bighitbiker3/bb-plugin-message-timestamps.git@v0.1.0
+rift plugin install git:https://github.com/euforicio/rift-plugin-message-timestamps.git@v0.1.0
 ```
 
 From a local checkout:
 
 ```sh
-npm install
-bb plugin build
-bb plugin install .
+npm ci
+rift plugin build
+rift plugin install .
 ```
+
+## Rift fork
+
+Maintained by Rift Labs for [Rift](https://riftlabs.app). Original source: [bighitbiker3/bb-plugin-message-timestamps](https://github.com/bighitbiker3/bb-plugin-message-timestamps). Original license and attribution are preserved.
+
+Use `npm ci` for the pinned SDK artifact; its provenance is in [vendor/README.md](vendor/README.md).

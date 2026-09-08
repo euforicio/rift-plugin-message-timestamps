@@ -1,8 +1,8 @@
 /* Time lives in the hover action row so it stays aligned with the bubble
    and does not fight React-owned nodes. */
-.group\/message > .mt-1.flex.justify-end[data-bb-sent-at]::before {
+.group\/message > .mt-1.flex.justify-end[data-rift-sent-at]::before {
   color: var(--muted-foreground);
-  content: attr(data-bb-sent-at);
+  content: attr(data-rift-sent-at);
   font-size: 0.6875rem;
   letter-spacing: 0.01em;
   line-height: 1.75rem;
@@ -13,9 +13,9 @@
 }
 
 /* Fallback when a user bubble has no action row. */
-.group\/message[data-bb-sent-at]::before {
+.group\/message[data-rift-sent-at]::before {
   color: var(--muted-foreground);
-  content: attr(data-bb-sent-at);
+  content: attr(data-rift-sent-at);
   display: block;
   font-size: 0.6875rem;
   letter-spacing: 0.01em;

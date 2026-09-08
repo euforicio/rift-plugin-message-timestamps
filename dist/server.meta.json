@@ -1,11 +1,11 @@
 {
   "sdkMajor": 0,
-  "sdkVersion": "0.4.1",
+  "sdkVersion": "0.4.48",
   "artifactFormatVersion": 1,
   "pluginId": "message-timestamps",
   "pluginVersion": "0.1.0",
   "builtWith": {
-    "bbVersion": "0.37.0",
-    "pluginSdkVersion": "0.4.1"
+    "riftVersion": "0.42.1",
+    "pluginSdkVersion": "0.4.48"
   }
 }
